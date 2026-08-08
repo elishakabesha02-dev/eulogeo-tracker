@@ -1,0 +1,13 @@
+{
+  "name": "Transcendent Life in Christ",
+  "short_name": "TLIC",
+  "description": "A ministry founded by Apostle Benjamin Zulu, proclaiming that hope is a Person.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
