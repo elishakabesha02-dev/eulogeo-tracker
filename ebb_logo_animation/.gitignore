@@ -1,6 +1,2 @@
 __pycache__/
 *.pyc
-
-# Video deliverables are force-added once the encode finalises;
-# ignored while in progress so a truncated file is never committed.
-output/*.mp4

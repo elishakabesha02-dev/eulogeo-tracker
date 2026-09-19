@@ -128,3 +128,34 @@ assets/                 the original supplied artwork, untouched
 
 Measured emblem geometry (from `assets/ebb_logo_source.png`): centre
 (624, 609), chrome ring outer radius 556 px.
+
+## Verified output
+
+Measured on the encoded files, not asserted:
+
+| Check | 1920×1080 | 1080×1080 | With sound |
+|---|---|---|---|
+| Container | H.264 High L4.2, yuv420p, 60 fps | ✔ | ✔ |
+| Duration / frames | 7.400 s / 444 | 7.400 s / 444 | 7.400 s / 444 |
+| Faststart (moov before mdat) | YES | YES | YES |
+| Size / bitrate | 10.9 MB / 11.8 Mb/s | 8.1 MB / 8.7 Mb/s | 11.1 MB / 12.0 Mb/s |
+| Audio | — | — | AAC 2ch 48 kHz 200 k |
+| Frame 0 brightness | 0.000 (pure black) | 0.000 | 0.000 |
+| Black tail | 0.35 s | 0.35 s | 0.35 s |
+| **Motion discontinuities** (frame delta > 4× local median) | **0 of 443** | **0 of 443** | **0 of 443** |
+
+Zero discontinuities means no jumps, no frame stepping and no slideshow
+artefacts anywhere in the shot. The largest frame delta sits at t = 2.983 →
+3.000 s, which is the intended hero-impact light burst: brightness ramps
+smoothly in (47.6 → 49.2), bursts on the single lock-off frame (57.7) and
+decays cleanly over the following 15 frames.
+
+**Logo fidelity.** The front-facing hero frame correlates **0.856** with the
+original artwork and only **0.500** with a mirrored copy — the medallion
+returns to the front unreversed, and EBB / INTERNATIONAL /
+PEOPLE • DATA • SOLUTIONS are preserved. The residual gap from 1.0 is the
+cinematic grade (bloom, plasma light, breathing zoom), not geometry.
+
+Audio master: peak 0.89, no clipped samples, negligible DC, with the intended
+dynamic arc — intro 0.056 RMS, spin 0.186, impact 0.391, breathing 0.206,
+dissolve 0.219, tail 0.041.
